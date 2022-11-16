@@ -42,8 +42,7 @@ public class CustomerManager {
             System.out.println("ERROR!\nPlease select your choice once again!");
             input=scanner.nextInt();
         }
-        Basket basket=new Basket();
-        int item=0;
+        
         if(input==1){
             System.out.println("----------------------");
             basePhoneManager=new ApplePhoneManager();
@@ -51,9 +50,7 @@ public class CustomerManager {
                     +"\nTotal basket value: "+basePhoneManager.getPrice()+"TL"+
                     "\nTotal basket value after calculation: "+basePhoneManager.phoneBuy(basePhoneManager.getPrice())+"TL");
             System.out.println("Item has been added to the basket.");
-            item++;
-            basket.setItemNumber(item);
-            basket.setBasketTotal(basePhoneManager.getPrice());
+           
 
         } else if(input==2){
             System.out.println("----------------------");
@@ -61,18 +58,14 @@ public class CustomerManager {
             System.out.println(basePhoneManager.getFirmInfo()+" "+basePhoneManager.getModelInfo()+" added to your basket."
             +"\nTotal basket value: "+basePhoneManager.getPrice()+"TL"+
                     "\nTotal basket value after calculation: "+basePhoneManager.phoneBuy(basePhoneManager.getPrice())+"TL");
-            item++;
-            basket.setItemNumber(item);
-            basket.setBasketTotal(basePhoneManager.getPrice());
+         
         } else if(input==3){
             System.out.println("----------------------");
             basePhoneManager=new HuaweiPhoneManager();
             System.out.println(basePhoneManager.getFirmInfo()+" "+basePhoneManager.getModelInfo()+" added to your basket."
                     +"\nTotal basket value: "+basePhoneManager.getPrice()+"TL"+
                     "\nTotal basket value after calculation: "+basePhoneManager.phoneBuy(basePhoneManager.getPrice())+"TL");
-            item++;
-            basket.setItemNumber(item);
-            basket.setBasketTotal(basePhoneManager.getPrice());
+           
         }
         selectCreditCard();
 
